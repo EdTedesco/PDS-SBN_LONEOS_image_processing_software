@@ -1,0 +1,1 @@
+This is a python script to extract filenames from Lowell Observatory Near-Earth Object Survey (LONEOS) images recovered from backup tapes for all such Flexible Image Transport System (FITS) files with double-spaced headers.
