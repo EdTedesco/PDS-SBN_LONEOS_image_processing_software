@@ -4,11 +4,9 @@ Recovered images are those that could not be read from the backup tapes using no
 
 See loneos_processing_details_v2.pdf in the (not yet released at the time of this writing) Planetary Data System / Small Bodies Node (PDS/SBN) V2.0 Archive  https://sbn.psi.edu/pds/resource/loneos.html for the details (this link will take you to the V1.0 Archive which does not include these images and is included here as a placeholder). 
 
-However, the PDS/SBN refused to allow this unmodified original data to be archived at the PDS/SBN and, due to the size of the dataset (~12TB), Zenodo was also unable to archive them. Consequently, unless this dataset becomes available elsewhere at some point this Python script has no images (other than the few example files included here) on which to run.
+However, due to the size of the dataset (~12TB), neither the PDS/SBN nor Zenodo were unable to archive them online. Consequently, I've only uploaded a few example inages to test this Python script. At the time of this writing (02 Aug 2025) the PDS/SBN is working on how to make these image files available. 
 
-Nevertheless, because NASA requires all software developed under its support to be archived I am doing so here.
-
-Dependencies include: 
+Required Python dependencies are: 
 time 
 os 
 fnmatch 
