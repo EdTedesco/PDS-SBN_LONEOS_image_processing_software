@@ -1,25 +1,29 @@
 # -*- coding: utf-8 -*-
 """
 Program create_ccdfnames_ds.py
-Final version created on Wed 23 July 2025
+Final version created on Sat 02 Aug 2025
 @author: Ed Tedesco
 
 Purpose: To extract filenames from lois_none (f-formatted) images recovered from
          tape for ALL *.fits files with double-spaced headers in the executing
-         directory.
+         directory. There were 4,278 such images from nights 980226 through
+         981115, twenty of which were unusable.
 
 Input:  Recovered image files in format f1234567.fits, f12345678.fits, and/or
         f123456789.fits in the same directory as create_ccdfnames_ds.py and
-        images with double-spaced headers containing keywords DATE-UT on line 45
-        and CCDPICNO. In addition, the image DATE-UT has '98/08/26 in cols 11-19
-        and CCDPICNO values on line 39 in cols 28-30.
+        images with double-spaced headers containing keywords DATE-UT and
+        CCDPICNO. In addition, DATE-UT has 'YY/MM/DD in columns 11-19
+        and CCDPICNO values (n through nnn) on line 39 in columns 28-30.
         
-Output: Renames the input f-formatted images with the filenames required by the
-        lois_none double-spaced pipeline: create_pds_files_none_ds.sh.
-
+Output: Replaces the input f-formatted image filenames with the filenames
+        required by the lois_none double-spaced pipeline:
+        create_pds_files_none_ds.sh.
+        and
         renamed_ds_lois_none_images.txt - A file with the recovered lois_none
-        double-spaced filenames and the filenames constructed from their headers.
-        This allows each lois_none image to be traced back to its source image.
+        double-spaced filenames and the filenames constructed from their
+        headers.
+        This allows each lois_none image, e.g., 981114_001.fits, to be traced
+        back to its source image, in this case, f0000004.fits.
 
 Note: This variant is ONLY for lois_none f-formated images with double-spaced
       headers.
@@ -62,7 +66,7 @@ def Read_LONEOS_FITS():
                DATE_UT_out = DATE_UT[11:13]+DATE_UT[14:16]+DATE_UT[17:19]
                print(DATE_UT_out+'_'+CCDPICNO_out+'.fits',entry,file=file_object)                
                new_file_name = DATE_UT_out+'_'+CCDPICNO_out+'.fits'
-               os.rename(entry, new_file_name)
+               os.replace(entry, new_file_name)
 # End def Read_LONEOS_FITS()
 #
 # Main program starts below
@@ -84,3 +88,4 @@ print(' ')
 execution_time = time.process_time() - start_time
 execution_time = f'{float(execution_time):.3f}'
 print ('Time to process',total,'images was', execution_time, "seconds")
+
