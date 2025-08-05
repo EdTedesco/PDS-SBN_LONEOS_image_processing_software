@@ -5,3 +5,5 @@ Each script is in its own Branch. The Branches are in roughly the order in which
 Branch https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tree/Renaming_f-formatted_ss_images contains the script to rename single-spaced f-formatted images recovered from backup tapes.
 
 Branch lois_none_double-spaced_pipeline (https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tree/Renaming_f-formatted_ds_images) contains the scripts to create augmented images and their .csv labels from the original renamed lois_none images.
+
+[LONEOS processing details](docs/
