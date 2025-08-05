@@ -6,4 +6,4 @@ Branch https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tre
 
 Branch lois_none_double-spaced_pipeline (https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tree/Renaming_f-formatted_ds_images) contains the scripts to create augmented images and their .csv labels from the original renamed lois_none images.
 
-[LONEOS processing details](main/loneos_project_description_v2.pdf)
+[LONEOS processing details](docs/loneos_processing_details_v2.pdf)
