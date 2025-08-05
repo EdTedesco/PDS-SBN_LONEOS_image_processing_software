@@ -1,6 +1,6 @@
 This page describes the software used to crteate the LONEOS Planetary Data System / Small Bodies Node (PDS-SBN) Archive and contains links to the scripts that are being archived here (because the PDS/SBN does not allow software to be archived). 
 
-Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the order in which the images were processed as described in loneos_processing_details_v2.pdf 
+Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the order in which the images were processed as described in more detail in loneos_processing_details_v2.pdf (https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf). Because this is being written prior to LONEOS Archive V2.0's release these links are to the existing version in LONEOS Archive V1.0 and are therefore of little practival use.
 
 Branch https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tree/Renaming_f-formatted_ss_images contains the script to rename single-spaced f-formatted images recovered from backup tapes.
 
