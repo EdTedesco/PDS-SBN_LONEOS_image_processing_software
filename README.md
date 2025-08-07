@@ -78,13 +78,13 @@ to directory D:\LONEOS\wd\
    using pipeline create_pds_files_none_ds.sh as an example. The specific
    scripts to run are detailed in each pipelines .sh script.
 
-   158 python create_org_fits_files_none\_ds.py from D:\LONEOS\wd
-   166 python create_hdr_none_ds.py
-   204 '/mnt/c/Program Files/JPSoft/TCMD29/tcc.exe' step_2_none.btm from D:\LONEOS\wd
-   222 '/mnt/c/Program Files/JPSoft/TCMD29/tcc.exe' step_3_none.btm from D:\LONEOS\wd
-   264 python add_wcs_none.py from D:\LONEOS\wd\none
-   269 python create_wcs_hdr_none.py from D:\LONEOS\wd\none
-   365 python create_label_none.py from D:\LONEOS\wd\none
+   158 python create_org_fits_files_none\_ds.py from D:\LONEOS\wd\
+   166 python create_hdr_none_ds.py\
+   204 '/mnt/c/Program Files/JPSoft/TCMD29/tcc.exe' step_2_none.btm from D:\LONEOS\wd\
+   222 '/mnt/c/Program Files/JPSoft/TCMD29/tcc.exe' step_3_none.btm from D:\LONEOS\wd\
+   264 python add_wcs_none.py from D:\LONEOS\wd\none\
+   269 python create_wcs_hdr_none.py from D:\LONEOS\wd\none\
+   365 python create_label_none.py from D:\LONEOS\wd\none\
    421 '/mnt/c/Program Files/JPSoft/TCMD29/tcc.exe' step_6-7_none.btm from D:\LONEOS\wd
 
 Before step_3_none.btm is run the code pauses to allow the user to see if all
