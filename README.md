@@ -12,24 +12,25 @@ have bias images.
 The following codes and template files must be in the indicated directories:
 
 ##### Input:
-In D:\LONEOS\wd The original renamed f-formatted .fits files (like
+In D:\LONEOS\wd<br/> The original renamed f-formatted .fits files (like
 980425_001.fits), create_org_fits_files_none_ds.py, create_hdr_none_ds.py,
 step_2_none.btm, Rename_LONEOS_Files.ps1 (used in step_2_none.btm),
-step_3_none.btm, and step_6-7_none.btm and
-In D:\LONEOS\wd\none add_wcs_none.py, create_wcs_hdr_none.py, and
+step_3_none.btm, and step_6-7_none.btm and<br/>
+In D:\LONEOS\wd\none<br/> add_wcs_none.py, create_wcs_hdr_none.py, and
 create_label_none.py, plus template files YYMMDD.csv, YYMMDDa.csv,
 YYMMDD.tbl, and YYMMDD_all.tbl 
 
 ##### Output:
 Original images (like 980425_001.fits in 980425.tar) and their Label files
-(e.g., 980425.csv) in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\980425.
+(_e.g._, 980425.csv) in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\980425.<br/>
 Augmented images (like 980425a_001.fits in 980425a.tar) and their Label files
-(e.g., 980425_a.csv) in D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\980425.
+(_e.g._, 980425_a.csv) in D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\980425.<br/>
 Intermediate files (980425.tbl, 980425_all.tbl, 980425_hdr.tar, 980425_wcs_hdr.tar,
 and org_fits_files.txt) in D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\980425.
 
 The intermediate files are no longer needed after this code exits and so are
-deleted from their working directories in step_6-7_none.btm
+deleted from their working directories in step_6-7_none.btm However, they remain in
+D:\LONEOS_LONEOS_Archive\intermediate_files\lois_none These files were not archived because that was too time consuming to do within the PDS-SBN's rules.
 
 In addition to the above the following, empty, input and output directories
 must exist prior to running the pipeline.
