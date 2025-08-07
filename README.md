@@ -61,8 +61,7 @@ Not all pipeline use all of the above directories. After running, each pipeline
 deletes the files it created in these directories thereby returning them to the
 state required for the next run.
 
-This script will load the (montage38) eft@Metis:/$ environment required to use
-MontagePy modules.
+This script will load the montage38 environment required to use MontagePy modules.
 
 The steps required to do this are:
 
