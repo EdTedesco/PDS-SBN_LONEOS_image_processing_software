@@ -1,7 +1,6 @@
 ### Pipeline: create_pds_files_none_ds.sh
 
-#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, i.e., lois_none
-#### AND WITH A DOUBLE-SPACED HEADER!
+#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, _i.e._, lois_none AND WITH A DOUBLE-SPACED HEADER!
 
 This script creates augmented images and PDS4 Labels for LONEOS-I image files
 with double-spaced headers and must be run from within an Ubuntu montage38 
