@@ -1,7 +1,7 @@
-Pipeline: create_pds_files_none_ds.sh
+**Pipeline: create_pds_files_none_ds.sh**
 
-This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, i.e., lois_none
-AND WITH A DOUBLE-SPACED HEADER!
+**This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, i.e., lois_none
+AND WITH A DOUBLE-SPACED HEADER!**
 
 This script creates augmented images and PDS4 Labels for LONEOS-I image files
 with double-spaced headers and must be run from within an Ubuntu montage38 
@@ -12,7 +12,7 @@ have bias images.
 
 The following codes and template files must be in the indicated directories:
 
-Input:
+**Input:**
 In D:\LONEOS\wd The original renamed f-formatted .fits files (like
 980425_001.fits), create_org_fits_files_none_ds.py, create_hdr_none_ds.py,
 step_2_none.btm, Rename_LONEOS_Files.ps1 (used in step_2_none.btm),
@@ -21,7 +21,7 @@ In D:\LONEOS\wd\none add_wcs_none.py, create_wcs_hdr_none.py, and
 create_label_none.py, plus template files YYMMDD.csv, YYMMDDa.csv,
 YYMMDD.tbl, and YYMMDD_all.tbl 
 
-Output: 
+**Output:** 
 Original images (like 980425_001.fits in 980425.tar) and their Label files
 (e.g., 980425.csv) in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\980425.
 Augmented images (like 980425a_001.fits in 980425a.tar) and their Label files
@@ -35,7 +35,7 @@ deleted from their working directories in step_6-7_none.btm
 In addition to the above the following, empty, input and output directories
 must exist prior to running the pipeline.
 
-Input directories:
+**Input directories:**
 
 D:\LONEOS\wd\_1\
 D:\LONEOS\wd\_1a\
@@ -51,7 +51,7 @@ D:\LONEOS\wd\none\
 &nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\hdr\  
 &nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\wcs_hdr\
 
-Output directories:
+**Output directories:**
 
 D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none
 D:\LONEOS\_LONEOS_Archive\data_original\lois_none
