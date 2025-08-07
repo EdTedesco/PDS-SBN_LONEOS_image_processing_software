@@ -53,8 +53,8 @@ D:\LONEOS\wd\none\
 
 ### Output directories:
 
-D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none
-D:\LONEOS\_LONEOS_Archive\data_original\lois_none
+D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\
+D:\LONEOS\_LONEOS_Archive\data_original\lois_none\
 D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none
 
 Not all pipeline use all of the above directories. After running, each pipeline
