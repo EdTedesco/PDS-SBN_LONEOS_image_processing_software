@@ -39,27 +39,17 @@ Input directories:
 
 D:\LONEOS\wd\_1\
 D:\LONEOS\wd\_1a\
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_1a\hdr
-   
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_1a\wcs_hdr
-   
-D:\LONEOS\wd\_2
-
-D:\LONEOS\wd\_2a
-
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_2a\hdr
-   
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_2a\wcs_hdr
-   
-D:\LONEOS\wd\bias
-
-D:\LONEOS\wd\hdr
-
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_1a\hdr\
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_1a\wcs_hdr\
+D:\LONEOS\wd\_2\
+D:\LONEOS\wd\_2a\
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_2a\hdr\
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_2a\wcs_hdr\
+D:\LONEOS\wd\bias\
+D:\LONEOS\wd\hdr\
 D:\LONEOS\wd\none\
-
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\hdr
-   
-&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\wcs_hdr
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\hdr\  
+&nbsp;&nbsp;&nbsp;&nbsp;D:\LONEOS\wd\none\wcs_hdr\
 
 Output directories:
 
