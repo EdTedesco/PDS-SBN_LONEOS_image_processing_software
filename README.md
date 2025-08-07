@@ -37,9 +37,9 @@ must exist prior to running the pipeline.
 
 Input directories:
 
-D:\LONEOS\wd\_1
+D:\LONEOS\wd\_1\
 
-D:\LONEOS\wd\_1a
+D:\LONEOS\wd\_1a\
 
 &nbsp;&nbsp;&nbsp;D:\LONEOS\wd\_1a\hdr
    
