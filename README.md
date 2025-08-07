@@ -2,7 +2,7 @@
 
 Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the order in which the images were processed as described in more detail in [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf)[^1]. 
 
-A preliminary version of loneos_processing_details_v2.pdf is available in the main Branch.
+A preliminary version of [loneos_processing_details_v2.pdf](main/loneos_processing_details_v2.pdf) is available in the main Branch.
 
 Branch [Renaming_f-formatted_ds_images](https://github.com/EdTedesco/PDS-SBN_LONEOS_image_processing_software/tree/Renaming_f-formatted_ds_images) contains the script to rename double-spaced f-formatted images recovered from backup tapes.
 
