@@ -10,7 +10,7 @@ The following codes and template files must be in the indicated directories:
 
 ##### Input:
 In D:\LONEOS\wd<br/> The original renamed f-formatted .fits files (like
-980425_001.fits), create_org_fits_files_none_ds.py, create_hdr_none_ds.py,
+980425_001.fits), create_pds_files_none_ds.sh, create_org_fits_files_none_ds.py, create_hdr_none_ds.py,
 step_2_none.btm, Rename_LONEOS_Files.ps1 (used in step_2_none.btm),
 step_3_none.btm, and step_6-7_none.btm and<br/><br/>
 In D:\LONEOS\wd\none<br/> add_wcs_none.py, create_wcs_hdr_none.py, and
