@@ -1,13 +1,10 @@
 ### Pipeline: create_pds_files_none_ds.sh
 
-#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, _i.e._, lois_none AND WITH A DOUBLE-SPACED HEADER!
+#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, _i.e._, lois_none, AND WITH A DOUBLE-SPACED HEADER!
 
-This script creates augmented images and PDS4 Labels for LONEOS-I image files
-with double-spaced headers and must be run from within an Ubuntu montage38 
-terminal in D:\LONEOS\wd via the command: bash create_pds_files_none_ds.sh
+This script creates augmented images and PDS4 Labels for LONEOS-I lois_none image files with double-spaced headers and must be run from an Ubuntu montage38 environment terminal in D:\LONEOS\wd via the command: bash create_pds_files_none_ds.sh
 
-Actions on bias files are not performed because none of the lois_none nights
-have bias images.
+Actions on bias files are not performed because none of the lois_none nights have bias images.
 
 The following codes and template files must be in the indicated directories:
 
@@ -15,18 +12,18 @@ The following codes and template files must be in the indicated directories:
 In D:\LONEOS\wd<br/> The original renamed f-formatted .fits files (like
 980425_001.fits), create_org_fits_files_none_ds.py, create_hdr_none_ds.py,
 step_2_none.btm, Rename_LONEOS_Files.ps1 (used in step_2_none.btm),
-step_3_none.btm, and step_6-7_none.btm and<br/>
+step_3_none.btm, and step_6-7_none.btm and<br/><br/>
 In D:\LONEOS\wd\none<br/> add_wcs_none.py, create_wcs_hdr_none.py, and
 create_label_none.py, plus template files YYMMDD.csv, YYMMDDa.csv,
 YYMMDD.tbl, and YYMMDD_all.tbl 
 
 ##### Output:
 Original images (like 980425_001.fits in 980425.tar) and their Label files
-(_e.g._, 980425.csv) in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\980425.<br/>
-Augmented images (like 980425a_001.fits in 980425a.tar) and their Label files
-(_e.g._, 980425_a.csv) in D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\980425.<br/>
+(_e.g._, 980425.csv) in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\980425.<br/><br/>
 Intermediate files (980425.tbl, 980425_all.tbl, 980425_hdr.tar, 980425_wcs_hdr.tar,
-and org_fits_files.txt) in D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\980425.
+and org_fits_files.txt) in D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\980425.<br/><br/>
+Augmented images (like 980425a_001.fits in 980425a.tar) and their Label files
+(_e.g._, 980425_a.csv) in D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\980425.
 
 The intermediate files are no longer needed after this code exits and so are
 deleted from their working directories in step_6-7_none.btm However, they remain in
