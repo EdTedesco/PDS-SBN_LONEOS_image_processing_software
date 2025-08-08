@@ -1,0 +1,139 @@
+:: This script (step_6-7_none.btm) assumes it is being called from 
+:: D:\LONEOS\wd by create_pds_files_none_ds.sh AFTER Step 5 (sh315) has run.
+:: This is because org_fits_files.txt, required by this script,
+:: is created in Step 1 of create_pds_files_none.sh.
+:: 
+:: By this point the original images have been tarred into YYMMDD.tar and
+:: that file and the original images' labels (YYMMDD.csv) have been moved
+:: into D:\LONEOS\_LONEOS_Archive\data_original\lois_none\YYMMDD. The .tbl
+:: files (YYMMDD.tbl and YYMMDD_all.tbl) have been moved into
+:: D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\YYMMDD and the
+:: augmented images' lables (YYMMDDa.csv) have been created and moved into
+:: D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\YYMMDD
+:: 
+:: GOTO SKIP
+echo off
+echo ' ' 
+echo Step 6 - Archive, then TAR and move, the augmented .fits files.
+echo  
+echo The augmented fits files will be archived to tar files in directory
+echo D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\YYMMDD as YYMMDDa.tar
+::pause Press [Enter] to continue ...
+:: 
+:: Get the number of .fits files in the D:\LONEOS\wd\none directory
+cd D:\LONEOS\wd\none
+SET nimages=%@FILES[*.fits]
+echo ' '
+echo nimages = %nimages
+:: SET nimages=%@INC[%@LINES[org_fits_files.txt]]
+:: 
+:: Get the date of the fits files being processed. This requires that the code
+:: is being run from the executable directory and that org_fits_files.txt is
+:: present there.
+SET h=%@fileopen[org_fits_files.txt,r]
+SET obs_night=%@fileread[%h,6]
+echo closing handle #%h: %@fileclose[%h]
+echo obs_night = %obs_night
+SET a=a
+SET obs_night_a=%obs_night%%a
+echo obs_night_a = %obs_night_a
+:: pause Press [Enter] to continue ...
+:: 
+:: echo OFF
+:: Turn on Timer
+TIMER /1 ON
+::
+SET /T:int i=0
+:: 
+SET /t:dec extime=%@TIMER[1,s]
+CLS
+:: Create the tar balls for the augmented images and move them to the
+:: data_augmented dir. Then delete the *.fits files from the D:\LONEOS\wd
+:: and D:\LONEOS\wd\none directories.
+::
+echo step_6-7_none.btm line 54: Ready to tar the augmented images and move 
+echo the tar file to ... data_augmented\lois_none\YYMMDD and then delete 
+echo the *.fits files from the D:\LONEOS\wd and D:\LONEOS\wd\none directories.
+:: pause Press [Enter] to continue ...
+CDD D:\LONEOS\wd\none
+TAR D:\LONEOS\wd\none\%obs_night_a *a_*.fits
+DELAY 
+MOVE %obs_night_a%.tar D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\%obs_night
+echo step_6-7_none.btm line 62 moved YYMMDD_a.tar from D:\LONEOS\wd\none
+echo to ...data_augmented\lois_none\YYMMDD
+DEL *a_*.fits
+DEL org_fits_files.txt
+CDD D:\LONEOS\wd
+:: DEL *.fits
+:: pause Press [Enter] to continue ... 
+echo step_6-7_none.btm line 69: Finished doing the above and deleting all *.fits
+echo files from D:\LONEOS\wd and D:\LONEOS\wd\none
+:: pause Press [Enter] to continue ...
+:: Change to the wd\none dir, tar the YYMMDDa_nnn.fits files there, move them and
+:: their Labels to the data_augmented dir, and then delete the *.fits files in
+:: the wd\none dir and finally, move the Labels, to the data_original directory.
+:: pause '    'Press [Enter] to continue ...
+:: DELAY 
+:: MOVE %obs_night_1a%.csv D:\LONEOS\_LONEOS_Archive\data_augmented\lois_none\%obs_night
+:: DELAY 
+:: DEL *.fits
+:: ECHO obs_night.tar = %obs_night.tar
+:: PAUSE Press [Enter] to continue ...
+:: DELAY
+:: MOVE %obs_night.csv D:\LONEOS\_LONEOS_Archive\data_original\lois_none\%obs_night
+:: 
+:: Move the already created tarred original images in directories _1 and _2
+:: to the data_original directory
+:: 
+:: CDD D:\LONEOS\wd\_1
+:: MOVE %obs_night_1%.tar D:\LONEOS\_LONEOS_Archive\data_original\lois_1_3_3_0\%obs_night
+:: DELAY 
+:: CDD D:\LONEOS\wd\_2
+:: MOVE %obs_night_2%.tar D:\LONEOS\_LONEOS_Archive\data_original\lois_1_3_3_0\%obs_night
+:: 
+CDD D:\LONEOS\wd
+SET /t:dec extime=%@TIMER[1,s]
+:: CLS
+:: SCRPUT 10 15 BRI GRE ON BLAck Normal exit after processing %nimages images in^
+::  %@TIMER[1,s] seconds (%@eval[%nimages/%extime=2.3] images/sec).
+:: PAUSE Press any key when ready to return to test_call_batch.sh
+:: SKIP
+:: Intermediate files are in the directories below and all nine are to be moved
+:: to D:\LONEOS\_LONEOS_Archive\intermediate_files\%obs_night created in 
+:: create_pds_files_11.sh
+:: D:\LONEOS\wd - org_fits_files.txt
+:: D:\LONEOS\wd\none\hdr - YYMMDD_nnn.hdr --> hdr.tar
+:: D:\LONEOS\wd\none\wcs_hdr - YYMMDDa_nnn_wcs.hdr --> hdr_wcs.tar
+:: D:\LONEOS\wd\none - YYMMDD.tbl and YYMMDD_all.tbl
+:: 
+:: First create the four *.tar archives using, e.g.,
+:: TAR /G D:\LONEOS\_LONEOS_Archive\intermediate_files\%obs_night\hdr 
+:: D:\LONEOS\wd\none\hdr\*.hdr
+:: 
+CDD D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\%obs_night
+TAR %obs_night%_wcs_hdr *.hdr
+DEL *.hdr 
+DEL D:\LONEOS\wd\none\wcs_hdr\*.hdr
+TAR %obs_night%_hdr D:\LONEOS\wd\none\hdr\*.hdr
+DEL D:\LONEOS\wd\none\hdr\*.hdr
+:: The next line is probably not required because org_fits_files.txt is already
+:: in D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\%obs_night
+MOVE D:\LONEOS\wd\org_fits_files.txt D:\LONEOS\_LONEOS_Archive\intermediate_files\lois_none\%obs_night
+:: 
+:: MOVE D:\LONEOS\wd\none\*.tbl D:\LONEOS\_LONEOS_Archive\intermediate_files\%obs_night
+::
+:: Delete temporary files
+CDD D:\LONEOS\wd\hdr
+DEL *.hdr
+:: CDD D:\LONEOS\wd\none\hdr
+:: DEL *.hdr
+:: CDD D:\LONEOS\_LONEOS_Archive\_Temp\hdr
+:: DEL *.hdr
+CDD D:\LONEOS\_LONEOS_Archive\_Temp\wcs_hdr
+DEL *.hdr
+CDD D:\LONEOS\wd
+:: 
+EXIT
+:: for %A in (*_*_*_*_*.tif) do @for /f "tokens=1-4* delims=_" %B in ("%A") Do @echo Ren "%A" "%B_%C_%D_%E_LNA_%F"
+:: @SUBST[n, string1, string2]: Substitutes string1 starting at position n in string2.
+:: echo %@filename[D:\LONEOS\wd\*.fits]

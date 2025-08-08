@@ -1,0 +1,52 @@
+COMMENT
+This script (step_3_none.btm) assumes it is being called from D:\LONEOS\wd 
+by create_pds_files_none_ds.sh AFTER Steps 1 and 2 have run. This is because
+org_fits_files.txt, required by this script, is created in Step 1 and the 
+original YYMMDD_nnn.fits images were renamed to YYMMDDa_nnn.fits and moved 
+to D:\LONEOS\wd\none in Step 2.
+
+Before Step 3 is run a check is made to determine if all the original .fits
+images in D:\LONEOS\wd were renamed and moved to D:\LONEOS\wd\none If they 
+were not, then the user can manually rename and move them.
+
+step_3_none.btm then crops all the original renamed .fits images in directory 
+D:\LONEOS\wd\none. At this point the original images are archived in file
+YYMMDD.tar, in D:\LONEOS\_LONEOS_Archive\data_original\lois_none\YYMMDD
+
+The command below converts the original 2098x4146 image and resizes it to
+2046x4096 by placing that smaller image 50 pixels vertically and 2 pixels
+horizontally into the original image. This is equivalent to cropping off 
+the top 50 rows, first 2 and last 50 columns from the image.
+
+magick input.fits -crop 2046x4096+2+50 output_Cropped.fits
+
+:: 
+ENDCOMMENT
+echo OFF
+CLS
+echo ' '
+echo 'step_3_none.btm Line 28: Check for stranded .fits files - YYMMDD_nnn.fits'
+echo 'in ../wd and, if found, rename them to YYMMDDa_nnn.fits and move them to'
+pause 'wd\none. In either case, press [ENTER] to continue ...'
+
+SET nimages=%@INC[%@LINES[org_fits_files.txt]]
+
+:: Turn on Timer
+TIMER /1 ON
+::
+SET /T:int i=0
+:: 
+SET /t:dec extime=%@TIMER[1,s]
+CLS
+CDD D:\LONEOS\wd\none
+:: 
+DO fname in *.fits
+  magick %fname -crop 2046x4096+2+50 %fname
+  SCRPUT 10 15 BRI WHI ON BLAck %fname
+  set /a /t:dec i=i+1
+  IF %i == %nimages GOTO :FINISH
+ENDDO
+:: 
+:FINISH
+:pause 'Completed creating cropped images. Press [ENTER] to continue at sh230'
+EXIT
