@@ -1,8 +1,8 @@
 ### Pipeline: create_pds_files_none_ds.sh
 
-#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, _i.e._, lois_none, AND WITH A DOUBLE-SPACED HEADER!
+#### This script ONLY WORKS FOR IMAGES WITHOUT A LOIS VERSION, _i.e._, lois_none, AND WITH DOUBLE-SPACED HEADERS!
 
-This script creates augmented images and PDS4 Labels for LONEOS-I lois_none image files with double-spaced headers and must be run from an Ubuntu montage38 environment terminal in D:\LONEOS\wd via the command: bash create_pds_files_none_ds.sh
+This script creates augmented images and PDS4 Labels for lois_none image files with double-spaced headers and must be run from an Ubuntu montage38 environment terminal in D:\LONEOS\wd via the command: bash create_pds_files_none_ds.sh
 
 Actions on bias files are not performed because none of the lois_none nights have bias images.
 
