@@ -1,4 +1,4 @@
-#### This repository contains the software used to create the [Planetary Data System / Small Bodies Node (PDS-SBN) LONEOS Archive V2.0](https://sbn.psi.edu/pds/resource/doi/loneos_1.0.html).
+#### This repository contains the software used to create the [Planetary Data System / Small Bodies Node (PDS-SBN) LONEOS Archive V2.0](https://doi.org/10.26033/ms2j-v867).
 
 Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the chronological order in which the images were obtained as described in more detail in [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf)[^1]. 
 
