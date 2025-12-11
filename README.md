@@ -1,8 +1,6 @@
 #### This repository contains the software used to create the [Planetary Data System / Small Bodies Node (PDS-SBN) LONEOS Archive V2.0](https://doi.org/10.26033/ms2j-v867).
 
-Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the chronological order in which the images were obtained as described in more detail in [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details_v2.pdf)[^1]. 
-
-A preliminary version of loneos_processing_details_v2.pdf is available [here](loneos_processing_details_v2.pdf).
+Each script or pipeline (which is a set of linked scripts) is in its own Branch. The Branches are in roughly the chronological order in which the images were obtained as described in more detail in [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details_v2.pdf)[^1].
 
 The hardware consisted of a Windows PC running Microsoft Windows 11 Pro x64 with multiple NVME m.2 Solid State Drives (SSDs). Where a Windows program was unavailable, or not as efficient, a Linux version was used running Ubuntu v20.04.6 under Microsoft [Windows Subsystem for Linux (WSL2)]( https://ubuntu.com/desktop/wsl) and both Windows and Linux versions of Python[^2] (.py) were used. [Windows PowerShell]( https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5) (.ps1) and Linux and Windows batch scripts (.sh) and [TCC version 29](https://jpsoft.com/downloads/v29/tcmd.exe)[^3] (.btm) were also used. In addition, Ubuntu was run under a [montage38 environment](http://montage.ipac.caltech.edu).
 
