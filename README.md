@@ -12,9 +12,9 @@ The example images here are from tapes 006_CR (obtained on 1998/08/26) and 012_C
 
 Recovered images are those that could not be read from the backup tapes using normal tape reading tools and which were extracted by Datarecovery.com, Inc.® (DR) using their “… _program to essentially comb though the raw compressed data looking for FITS file markers_ …”. The format DR used for images it recovered from tapes that could not be read using normal tape-reading tools was of the form f123456789.fits and which are referred to in the Archive documentation as "f-formatted" files.
 
-See [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details_v2.pdf) for additional details.
+See [loneos_processing_details.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf) for additional details.
 
-Due to the size of the original dataset (~12TB), neither the PDS/SBN nor Zenodo were able to archive it online, _i.e._, none of the f-formatted files are available. Consequently, I've only uploaded a few example images to this branch to enable this Python script to run. At the time of this writing (12 Dec 2025) the PDS/SBN is working on whether, and if so, how to make all the original LONEOS image files available.
+Due to the size of the original dataset (~12TB), Zenodo was unable to archive it online, and at the time the Archive was released online the PDS/SBN was undecided on whether to host it, _i.e._, all the f-formatted files may not be available. Consequently, I've only uploaded a few example images to this branch to enable the renaming f-formatted Python scripts to run. The current status of the availability, if any, of this original LONEOS dataset is indicated on the Archive’s LONEOS landing page which is linked from the DOI landing page [LONEOS Archive landing page](https://doi.org/10.26033/ms2j-v867).
 
 Required Python dependencies are: time, os, fnmatch, astropy.io.fits
 
