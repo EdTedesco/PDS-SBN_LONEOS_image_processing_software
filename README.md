@@ -1,6 +1,6 @@
 create_ccdfnames_ds.py is a python script to extract filenames from Lowell Observatory Near-Earth Object Survey (LONEOS) images recovered from backup tapes 006_CR through 012_CR for all such Flexible Image Transport System (FITS) files with double-spaced headers. There are 26 nights with 4,278 images between 1998/02/26 and 1998/11/15, inclusive, for which such data exist all of which have double-spaced (ds) headers.
 
-The following three paragraphs are from “§2.1.2 Renaming Files” in [loneos_processing_details_v2.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details_v2.pdf), beginning immediately after Fig. 3:
+The following three paragraphs are from “§2.1.2 Renaming Files” in [loneos_processing_details.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf), beginning immediately after Fig. 3:
 
 “_The majority of the LONEOS-I images were extracted from the CR tapes in the f-format[^1] using the recovery method described in Appendix I and hence could not be renamed as simply as those with the YYYYMMDDnnnnb.fits format. However, the original filenames of the f-formatted images could be reconstructed from keywords in their headers, e.g., the LONEOS-I images (those with dates through 2000/01/11), like f1053773.fits for example, had keywords “CCDPICNO=   22 / running sequence number” and “DATE-UT = '98/05/25   ' / ut date of obs”. Hence, f1053773.fits could be renamed 980525_022.fits_
 
