@@ -14,7 +14,7 @@ Recovered images are those that could not be read from the backup tapes using no
 
 See [loneos_processing_details.pdf](https://sbnarchive.psi.edu/pds4/surveys/gbo.ast.loneos.survey/document/loneos_processing_details.pdf) for additional details.
 
-Due to the size of the original dataset (~12TB), Zenodo was unable to archive it online, and at the time the Archive was released online the PDS/SBN was undecided on whether to host it, _i.e._, all the f-formatted files may not be available. Consequently, I've only uploaded a few example images to this branch to enable the renaming f-formatted Python scripts to run. The current status of the availability, if any, of this original LONEOS dataset is indicated on the Archive’s LONEOS landing page which is linked from the DOI landing page [LONEOS Archive landing page](https://doi.org/10.26033/ms2j-v867).
+Due to the size of the original dataset (~12TB), Zenodo was unable to archive it online, and at the time the Archive was released online the PDS/SBN was undecided on whether to host it, _i.e._, all the f-formatted files may not be available. Consequently, I've only uploaded a few example images to this branch to enable the renaming f-formatted Python scripts to run. The current status of the availability, if any, of this original LONEOS dataset is indicated on the Archive’s LONEOS landing page which is linked from the [LONEOS Archive landing page](https://doi.org/10.26033/ms2j-v867).
 
 Required Python dependencies are: time, os, fnmatch, astropy.io.fits
 
